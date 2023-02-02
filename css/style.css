@@ -71,7 +71,34 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start /sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  display: block;
+  height: 4px;
+  width: 4.5rem;
+  background-color: #f9f7f6;
+  margin-top: 6rem;
+  cursor: pointer; }
+
+.nav-btn::after {
+  content: "";
+  height: 4px;
+  width: 4.5rem;
+  transform: translateY(-2rem);
+  background-color: inherit;
+  display: block; }
+
+.nav-btn::before {
+  content: "";
+  height: 4px;
+  width: 4.5rem;
+  transform: translateY(1.5rem);
+  background-color: inherit;
+  display: block; }
 
 .header {
   background-color: #54483A;
@@ -258,4 +285,54 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem; }
+  .nav .list__item {
+    padding: 1.5rem;
+    display: block;
+    text-align: center;
+    transition: all 200ms; }
+
+.list__link:visited,
+.list__link:link,
+.list__active {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  transition: all 200ms; }
+
+.list__link:hover,
+.list__link:visited,
+.list__item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px); }
+
+.copyright {
+  display: block;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.5); }
+
+.github:link,
+.github:visited {
+  text-decoration: none;
+  color: #c69963;
+  transition: all 200ms;
+  display: inline-block; }
+  .github:link:hover,
+  .github:visited:hover {
+    border-bottom: 1px solid #c69963;
+    background-color: #6D5D4B;
+    transform: skewY(4deg) translateY(-2px) scaleY(1.1); }

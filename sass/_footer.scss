@@ -1,4 +1,65 @@
 .footer {
     background-color: $color-secondary;
     grid-column: full-start / full-end;
+    padding: 8rem;
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+
+    .list__item {
+        
+        padding: 1.5rem;
+        display: block;
+        text-align: center;
+        transition: all 200ms;
+    }
+}
+
+.list__link:visited,
+.list__link:link,
+.list__active {
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: $font-display;
+    transition: all 200ms;
+}
+
+.list__link:hover,
+.list__link:visited,
+.list__item:hover {
+    background-color:rgba(#fff,.3);
+    transform: translateY(-5px);
+}
+
+
+.copyright {
+    display: block;
+    margin-top: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgba(#fff,.5);
+}
+
+
+.github:link,
+.github:visited {
+    text-decoration: none;
+    color: $color-primary;
+    transition: all 200ms;
+    display: inline-block;
+    
+    &:hover {
+        border-bottom: 1px solid $color-primary;
+        background-color: $color-grey-dark-2;
+        transform: skewY(4deg) translateY(-2px) scaleY(1.1);
+    }
 }
