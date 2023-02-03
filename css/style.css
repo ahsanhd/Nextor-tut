@@ -24,6 +24,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  font-size: 2.5rem;
+  text-transform: uppercase; }
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -101,8 +105,52 @@ body {
   display: block; }
 
 .header {
-  background-color: #54483A;
-  grid-column: full-start / col-start 7; }
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(/img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  grid-column: full-start / col-start 7;
+  display: grid;
+  grid-template-rows: 1fr max-content max-content 1fr max-content;
+  padding: 8rem;
+  padding-top: 6rem;
+  justify-content: center; }
+  .header__logo {
+    height: 4.5rem;
+    justify-self: center; }
+  .header__heading {
+    font-size: 4rem;
+    color: #f9f7f6;
+    font-family: "Josefin Sans", sans-serif; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__seenon-text {
+    font-size: 1.4rem;
+    font-family: "Nunito", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 1rem;
+    align-items: center; }
+    .header__seenon-text::before {
+      content: "";
+      height: 1px;
+      background-color: #aaa;
+      display: block; }
+    .header__seenon-text::after {
+      content: "";
+      height: 1px;
+      background-color: #aaa;
+      display: block; }
+  .header__seenon-logos {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    justify-content: center; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(70%);
+      justify-self: center; }
 
 .realtors {
   background-color: #101d2c;
