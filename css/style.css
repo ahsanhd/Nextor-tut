@@ -154,15 +154,23 @@ body {
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 4rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-row-gap: 5vw; }
   .realtors__box {
     display: grid;
     grid-template-columns: min-content max-content;
     grid-column-gap: 1rem;
-    grid-row-gap: 2rem; }
+    grid-row-gap: 2rem;
+    align-items: center; }
   .realtors__img {
     width: 7rem;
     border-radius: 50%; }
+  .realtors__details {
+    margin-top: -1px; }
 
 .features {
   grid-column: center-start / center-end;
