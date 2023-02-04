@@ -6,10 +6,15 @@
     grid-column: full-start / col-start 7 ;
 
     display: grid;
-    grid-template-rows: 1fr max-content max-content 1fr max-content;
+    grid-template-rows: 1fr min-content min-content 1fr min-content;
     padding: 8rem;
     padding-top: 6rem;
     justify-content: center;
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-column: 1 / -1; 
+        padding: 4rem;
+    }
 
     &__logo {
         height: 4.5rem;
@@ -68,7 +73,16 @@
             height: 2.5rem;
             filter: brightness(70%);
             justify-self: center;
+            
+            @media only screen and (max-width:$bp-small) {
+                
+                
+            }     
         }
     }
-
+    @media only screen and (max-width:$bp-small) {
+       
+        
+    }     
+    
 }
